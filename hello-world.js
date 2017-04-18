@@ -1,1 +1,1 @@
-return Promise.resolve(() => 'Hello world!');
+return Promise.resolve('Hello world!');

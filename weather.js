@@ -1,6 +1,6 @@
-const zip = message.split(' ')[1];
-if (!zip || /[^0-9]/g.exec(zip)) {
-	return 'Oops, please send your message in the format "@weather [zip code]"';
+const zip = message;
+if (/[^0-9]/g.exec(zip)) {
+	return new Promise.resolve('Oops, please just send a zip code to this module');
 }
 
 const rp = require('request-promise');

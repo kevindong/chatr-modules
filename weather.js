@@ -1,4 +1,7 @@
 const zip = message;
+if (message.indexOf('help') !== -1 || message === '?') {
+	return Promise.resolve('Just send a zip code, and we\'ll return the weather!');
+}
 if (/[^0-9]/g.exec(zip)) {
 	return Promise.resolve('Oops, please just send a zip code to this module');
 }
